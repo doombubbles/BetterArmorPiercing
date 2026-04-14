@@ -1,1 +1,1 @@
-- Recompile for v36.0
+- Fixed for recent BTD6 versions

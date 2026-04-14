@@ -8,6 +8,7 @@ using BTD_Mod_Helper.Api.Helpers;
 using BTD_Mod_Helper.Api.ModOptions;
 using BTD_Mod_Helper.Extensions;
 using Il2Cpp;
+using Il2CppSystem.IO;
 using MelonLoader;
 
 [assembly:
@@ -39,7 +40,7 @@ public class BetterArmorPiercingMod : BloonsTD6Mod
         gameModel.GetUpgrade(UpgradeType.ArmorPiercingDarts).cost =
             CostHelper.CostForDifficulty(ArmorPiercingDartsCost, gameModel);
 
-        foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.MonkeySub)
+        foreach (var towerModel in gameModel.GetTowersWithBaseId(TowerType.MonkeySub).ToArray()
                      .Where(model => model.appliedUpgrades.Contains(UpgradeType.ArmorPiercingDarts)))
         {
             var damageModel = towerModel.GetWeapon()!.projectile.GetDamageModel()!;
