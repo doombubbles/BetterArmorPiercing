@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Il2CppAssets.Scripts.Models;
 using Il2CppAssets.Scripts.Models.Towers;
 using BetterArmorPiercing;
@@ -14,6 +14,7 @@ using MelonLoader;
 [assembly:
     MelonInfo(typeof(BetterArmorPiercingMod), ModHelperData.Name, ModHelperData.Version, ModHelperData.RepoOwner)]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
+[assembly: MelonGame("Ninja Kiwi", "BloonsTD6-Epic")]
 
 namespace BetterArmorPiercing;
 
